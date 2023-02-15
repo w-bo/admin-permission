@@ -87,3 +87,12 @@
 `v-permission.remove="condition"` 如果condition为true，则移除当前绑定指令的标签。
 
 结尾：大体就这些了，接口方面已经写好交互了。
+
+------
+
+### 项目出自上文，下述内容为个人看法。
+code - B站上另一种权限管理实现的思路，感觉上不是很清晰，大家学习可以参考下方图片进行面试题答题。
+
+![](src/assets/control-1.png)
+
+![](src/assets/control-2.png)

@@ -21,54 +21,49 @@ for (let i = 0; i < 20; i++) {
 const users = [
   {
     id: 1,
-    username: '普通用户',
+    username: 'normal',
     password: 'normal',
     token: 'abcdefghijklmnopqrstuvwxyz',
     rights: [{
-      id: 1,
+      id: '1',
       authName: '一级菜单',
       icon: 'icon-menu',
       children: [{
-        id: 11,
+        id: '1-1',
         authName: '一级项目1',
-        path: '/',
+        path: '/menu/one',
         rights: ['view', 'edit', 'add', 'delete']
-      }, {
-        id: 11,
-        authName: '一级项目2',
-        path: '/',
-        rights: ['view']
       }]
     }]
   },
   {
     id: 2,
-    username: '管理员',
+    username: 'admin',
     password: 'admin',
     token: 'abcdefghijklmnopqrstuvwxyz'.split('').reverse().join(''),
     rights: [{
-      id: 1,
+      id: '1',
       authName: '一级菜单',
       icon: 'icon-menu',
       children: [{
-        id: 11,
+        id: '1-1',
         authName: '一级项目1',
         path: '/',
         rights: ['view', 'edit', 'add', 'delete']
       }, {
-        id: 11,
+        id: '1-2',
         authName: '一级项目2',
-        path: '/',
+        path: '/menu/two',
         rights: ['view', 'edit', 'add', 'delete']
       }]
     }, {
-      id: 2,
+      id: '2',
       authName: '二级菜单',
       icon: 'icon-menu',
       children: [{
-        id: 22,
+        id: '2-1',
         authName: '二级项目1',
-        path: '/',
+        path: '/menu/two',
         rights: ['view', 'edit', 'add', 'delete']
       }]
     }]

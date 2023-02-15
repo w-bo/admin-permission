@@ -30,6 +30,8 @@ export default {
       }).then(() => {
         setTimeout(() => {
           this.$router.push('/login')
+          // 删除数据
+          sessionStorage.clear()
           window.location.reload()
         }, 500)
       }).catch(err => err)

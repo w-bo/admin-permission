@@ -180,12 +180,13 @@ export default {
     }
   },
   created () {
-    if (this.$route.query.name) {
-      this.addBread({
-        name: this.$route.query.name,
-        path: this.$route.path
-      })
-    }
+    // 放在这里不是很好
+    // if (this.$route.query.name) {
+    //   this.addBread({
+    //     name: this.$route.query.name,
+    //     path: this.$route.path
+    //   })
+    // }
     this.initData()
   },
   components: {

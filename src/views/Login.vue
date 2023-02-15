@@ -27,7 +27,7 @@
 
 <script>
 import { mapMutations } from 'vuex'
-
+import { initDynamicRoutes } from '@/router'
 export default {
   data () {
     return {
@@ -65,6 +65,7 @@ export default {
               return false
             }
             this.setUser(res.data)
+            initDynamicRoutes()
             this.$router.push('/')
           })
         }

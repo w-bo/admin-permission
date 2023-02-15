@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     breads: [],
-    user: {}
+    user: JSON.parse(sessionStorage.getItem('user') || '{}'),
+    rightList: JSON.parse(sessionStorage.getItem('rightList') || '[]')
   },
   mutations: {
     addBread (state, bread) {
@@ -22,6 +23,10 @@ export default new Vuex.Store({
     },
     setUser (state, user) {
       state.user = user
+      state.rightList = user.rights
+      sessionStorage.setItem('user', JSON.stringify(user))
+      sessionStorage.setItem('rightList', JSON.stringify(user.rights))
+      sessionStorage.setItem('token', user.token)
     }
   },
   actions: {

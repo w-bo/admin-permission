@@ -93,6 +93,6 @@
 ### 项目出自上文，下述内容为个人看法。
 code - B站上另一种权限管理实现的思路，感觉上不是很清晰，大家学习可以参考下方图片进行面试题答题。
 
-![](src/assets/control-1.png)
+![](https://raw.githubusercontent.com/w-bo/admin-permission/once/src/assets/control-1.png)
 
 ![](src/assets/control-2.png)

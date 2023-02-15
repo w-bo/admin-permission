@@ -35,10 +35,10 @@
       >
         <template v-slot:default="scope">
           <div class="btns">
-            <el-button type="primary" @click="handleUpdate(scope)">
+            <el-button type="primary" @click="handleUpdate(scope)" v-permission='{action: "edit"}'>
               <i class="el-icon-edit"></i>
             </el-button>
-            <el-button type="danger" @click="handleDelete(scope)">
+            <el-button type="danger" @click="handleDelete(scope)" v-permission='{action: "delete", effect: "disabled"}'>
               <i class="el-icon-delete"></i>
             </el-button>
           </div>

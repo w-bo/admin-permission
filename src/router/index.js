@@ -11,11 +11,18 @@ const menuOne = {
   path: '/menu/one',
   // name: '菜单栏1',
   component: () => import('@/views/Page1.vue')
+  // 元信息
+  // meta: {}
 }
 const menuTwo = {
   path: '/menu/two',
   // name: '菜单栏1',
   component: () => import('@/views/Page1.vue')
+}
+const error404 = {
+  path: '*',
+  name: 'NotFound',
+  component: NotFound
 }
 
 // 路由规则和字符串的映射关系
@@ -57,12 +64,12 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
-  },
-  {
-    path: '*',
-    name: 'NotFound',
-    component: NotFound
   }
+  // {
+  //   path: '*',
+  //   name: 'NotFound',
+  //   component: NotFound
+  // }
 ]
 
 const router = new VueRouter({
@@ -95,6 +102,7 @@ export const initDynamicRoutes = () => {
     item.children.forEach(item => {
       // item 二级权限
       const temp = mapObject[item.path]
+      temp.meta = item.rights
       currentRoutes[0].children.push(temp)
     })
   })
@@ -106,6 +114,9 @@ export const initDynamicRoutes = () => {
       item.children.forEach(item => router.addRoute(item))
     }
   })
+
+  // 在所有动态路由添加完成后，再添加404页面路由
+  router.addRoute(error404)
 }
 
 export default router

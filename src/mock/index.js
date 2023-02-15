@@ -32,7 +32,7 @@ const users = [
         id: '1-1',
         authName: '一级项目1',
         path: '/menu/one',
-        rights: ['view', 'edit', 'add', 'delete']
+        rights: ['view', 'edit', '', '']
       }]
     }]
   },
@@ -72,6 +72,7 @@ const users = [
 
 // 获取列表
 Mock.mock('/list', 'get', options => {
+  console.log(options)
   const { current } = JSON.parse(options.body)
   return list.slice(((current - 1) * 10), current * 10)
 })

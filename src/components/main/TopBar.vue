@@ -5,7 +5,7 @@
        搜索
       </template>
     </el-input>
-    <el-button type="primary" @click="$emit('show')">添加商品</el-button>
+    <el-button type="primary" @click="$emit('show')" v-permission='{ action: "add", effect: "disabled" }'>添加商品</el-button>
   </div>
 </template>
 
